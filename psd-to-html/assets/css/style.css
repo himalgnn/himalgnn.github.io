@@ -102,7 +102,7 @@ body {
 
 /* poster */
 #poster{
-    background-image: url("../assets/img/banner.jpg");
+    background-image: url("../assets/img/banner.png");
     height: 500px;
     background-position: center;
     background-size: cover;
