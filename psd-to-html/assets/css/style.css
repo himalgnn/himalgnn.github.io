@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Arial';
-    src: url('psd-to-html/assets/fonts/Arial.ttf');
+    src: url('/psd-to-html/assets/fonts/Arial.ttf');
 }
 
 @font-face {
     font-family: 'Arial-bold';
-    src: url('psd-to-html/assets/fonts/Arial Bold.ttf');
+    src: url('/psd-to-html/assets/fonts/Arial Bold.ttf');
 }
 
 @font-face {
     font-family: 'din-alt-bold';
-    src: url('psd-to-html/assets/fonts/DIN Alternate Bold.ttf');
+    src: url('/psd-to-html/assets/fonts/DIN Alternate Bold.ttf');
 }
 
 * {
