@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Arial';
-    src: url('/assets/fonts/Arial.ttf');
+    src: url('psd-to-html/assets/fonts/Arial.ttf');
 }
 
 @font-face {
     font-family: 'Arial-bold';
-    src: url('/assets/fonts/Arial Bold.ttf');
+    src: url('psd-to-html/assets/fonts/Arial Bold.ttf');
 }
 
 @font-face {
     font-family: 'din-alt-bold';
-    src: url('/assets/fonts/DIN Alternate Bold.ttf');
+    src: url('psd-to-html/assets/fonts/DIN Alternate Bold.ttf');
 }
 
 * {
@@ -102,7 +102,7 @@ body {
 
 /* poster */
 #poster{
-    background-image: url("https://himal61.com.np/psd-to-html/assets/img/banner.jpg");
+    background-image: url("/psd-to-html/assets/img/banner.jpg");
     height: 500px;
     background-position: center;
     background-size: cover;
