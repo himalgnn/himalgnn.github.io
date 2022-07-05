@@ -1,0 +1,112 @@
+/* Navigation */
+#navbar{
+    flex-direction: column;
+}
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 10px 10px;
+}
+
+/* Welcome Section */
+#welcome{
+    height: 370px;
+    padding: 3px 28px;
+    
+}
+#welcome::before{
+    height: 360px;
+    
+}
+#welcome p{
+    font-size: 1rem;
+}
+#welcome h1{
+    font-size: 2rem;
+}
+
+/* Services Section */
+#services{
+    flex-direction: column;
+}
+#services-container h1{
+    padding: 0.5rem;
+}
+#services .box{
+    padding: 1rem;
+    margin: 2px 0px;
+    margin-bottom: 1rem;
+}
+
+/* Delivery Location */
+#delivery-container{
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+/* Our Team */
+#our-team .box{
+    margin-right: 2px;
+    
+}
+#our-team .box h2{
+    font-size: 1rem;
+
+}
+#our-team .box p{
+    font-size: 0.8rem;
+
+}
+
+/* Contact Us Section */
+#contact-box form{
+    width: 80%;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 90%;
+}
+
+/* Footer */
+/* No Styling for Footer in Mobile */
+
+/* Utility Classes */
+.h-primary{
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+.btn{
+    font-size: 13px;
+    padding: 4px 8px;
+}
+
+/* Small Mobile Devices */
+@media only screen and (max-width:470px){
+    /* Navbar Section */
+    #navbar ul li a {
+        font-size: 0.8rem;
+        padding: 10px 6px;
+    }
+
+    /* Services Section */
+    #services .box img{
+        height: 90px;
+        width: 100px;
+    }
+    #services .box p {
+        font-size: 0.8rem;
+    }
+
+    /* Delivery Section */
+    #delivery-container h1 {
+        font-size: 1rem;
+        
+    }
+
+    /* Utility Classes */
+    .h-secondary {
+        font-size: 1.8rem;
+    }
+    
+    
+    
+}

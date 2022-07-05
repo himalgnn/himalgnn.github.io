@@ -1,0 +1,343 @@
+/* Import Fonts */
+@font-face {
+    font-family: noteworthy;
+    src: url('../fonts/Noteworthy.ttc');
+}
+@font-face {
+    font-family: optima;
+    src: url('../fonts/Optima.ttc');
+}
+@font-face {
+    font-family: avenir;
+    src: url('../fonts/Avenir.ttc');
+}
+
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navbar Styling */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+}
+
+/* Navbar Logo */
+#logo{
+    margin: 10px 34px;
+    cursor: pointer;
+
+}
+#logo a{
+    color: wheat;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 3px 6px;
+    font-family: noteworthy;
+    text-decoration: none;
+
+}
+
+/* Navbar List Styling */
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.85;
+}
+
+#navbar ul li{
+
+    list-style-type: none;
+    font-size: 1.3rem;
+    
+}
+
+#navbar ul li a{
+     color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: optima;
+    
+}
+
+#navbar ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/* Welcome Section */
+#welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 200px;
+    height: 620px;
+    position: relative;
+    
+}
+
+#welcome::before{
+    content: "";
+    position: absolute;
+    background: url('../img/background.jpeg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    top: 0px;
+    left: 0px;
+    filter: brightness(0.5)
+}
+
+#welcome h1{
+    color: white;
+    text-align: center;
+    font-family: optima;
+    font-size: 3.5rem;
+}
+#welcome p{
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: avenir;
+}
+
+/* Our Services Section */
+#services-container{
+    padding: 0 7%;
+}
+#services{
+    margin: 10px;
+    display: flex;
+}
+#services .box{
+    background-color: #f2f2f2;
+    margin: 3px 6px;
+    padding: 10px;
+    border: 2px solid rebeccapurple;
+    border-radius: 23px;
+
+}
+#services .box img{
+    display: block;
+    margin: auto;
+    height: 160px;
+}
+#services .box p{
+    font-family: avenir;
+}
+
+/* Check Delivery Location */
+#delivery-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272727;
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+#delivery-container .section50{
+    margin: 5px 10px;
+}
+#delivery-container h1{
+    font-size: 1.5rem;
+    font-family: avenir;
+}
+
+#delivery-container input[type="number"]{
+    width: 50%;
+    padding: 12px 20px;
+    margin-right: 1rem;
+    border: 0px;
+    border-radius: 0.2rem;
+
+
+}
+#delivery-container input[type="submit"]{
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    padding: 7px 20px;
+    border: 2px solid white;
+    border-radius: 0.2rem;
+    font-family: noteworthy;
+
+}
+#delivery-container input[type="submit"]:hover{
+    background-color: purple;
+    color: whitesmoke; 
+}
+
+
+/* Our Team Section */
+#team-container{
+    padding: 0 7%;
+
+}
+
+#our-team{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+#our-team .box{
+    /* border: 2px; */
+    box-shadow: 2px 2px 5px #d8c1c1, -2px -2px 5px #d8c1c1;
+    border-radius: 20px;
+    margin: 3px 0.7rem;
+    margin-bottom: 1rem;
+    background-color: #f2f2f2;
+}
+#our-team .box:hover{
+    
+    box-shadow: 2px 2px 5px #d8c1c1, -2px -2px 5px #d8c1c1;
+    background-color: white;
+}
+
+#our-team .box img{
+    display: block;
+    margin: auto;
+    height: 120px;
+    padding: 15px;
+}
+
+#our-team .box p{
+    font-family: avenir;
+    margin-bottom: 0.5rem;
+
+}
+#our-team .box h2{
+    font-family: avenir;
+    font-size: 1.5rem;
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+    margin-top: 2rem;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../img/contact.jpeg') no-repeat center center/cover;
+    filter: brightness(0.5);
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    border: 0px;
+    box-shadow: 2px 2px 5px #0f0e0e, -2px -2px 5px #0f0e0e;
+    padding: 1rem;
+    font-size: 1.1rem;
+    resize: none;
+    outline: none;
+}
+
+#contact-box form{
+    width: 50%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: noteworthy;
+    color: white;
+}
+#contact-box .form-group{
+   margin-bottom: 2rem;
+}
+#contact-box input[type="submit"]{
+    border: 2px solid white;
+    font-size: 1.4rem;
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+/* Footer Section */
+footer{
+    background-color: #272727;
+    color: white;
+    padding: 20px 25px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-size: 3.5rem;
+    padding: 1.3rem;
+    font-family: optima;
+    color: #48c9fd
+}
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+    font-family: optima;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: noteworthy;
+}
+.btn:hover{
+    background-color: purple;
+    color: whitesmoke; 
+}
+.center{
+    text-align: center;
+
+}
