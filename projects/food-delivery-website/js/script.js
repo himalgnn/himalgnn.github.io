@@ -9,37 +9,52 @@ var team_container = document.getElementById("team-container");
 var contact = document.getElementById("contact");
 var footer = document.getElementById("footer");
 
-// Function Open Menu 
-function openMenu(){
-    navbar_ul.style.left="0%";
+// Function Open Mobile Menu 
+function openMenu() {
+    navbar_ul.style.left = "0%";
 
-    // Blur Elements on mobile Navbar toggle
-    logo.style.filter="blur(4px)";
-    open_menu.style.filter="blur(4px)";
-    welcome.style.filter="blur(4px)";
-    services_container.style.filter="blur(4px)";
-    delivery_container.style.filter="blur(4px)";
-    team_container.style.filter="blur(4px)";
-    contact.style.filter="blur(4px)";
-    footer.style.filter="blur(4px)";
-    
-    
+    // Blur Elements on mobile menu toggle
+    logo.style.filter = "blur(4px)";
+    open_menu.style.filter = "blur(4px)";
+    welcome.style.filter = "blur(4px)";
+    services_container.style.filter = "blur(4px)";
+    delivery_container.style.filter = "blur(4px)";
+    team_container.style.filter = "blur(4px)";
+    contact.style.filter = "blur(4px)";
+    footer.style.filter = "blur(4px)";
 }
 
+// Function Close Mobile Menu 
+function closeMenu() {
+    navbar_ul.style.left = "-100%";
 
-// Function Close Menu 
-function closeMenu(){
-    navbar_ul.style.left="-100%";
+    // UnBlur Elements on mobile menu toggle off
+    logo.style.filter = "blur(0)";
+    open_menu.style.filter = "blur(0)";
+    welcome.style.filter = "blur(0)";
+    services_container.style.filter = "blur(0)";
+    delivery_container.style.filter = "blur(0)";
+    team_container.style.filter = "blur(0)";
+    contact.style.filter = "blur(0)";
+    footer.style.filter = "blur(0)";
 
-    // UnBlur Elements on mobile Navbar toggle off
-    logo.style.filter="blur(0)";
-    open_menu.style.filter="blur(0)";
-    welcome.style.filter="blur(0)";
-    services_container.style.filter="blur(0)";
-    delivery_container.style.filter="blur(0)";
-    team_container.style.filter="blur(0)";
-    contact.style.filter="blur(0)";
-    footer.style.filter="blur(0)";
-    
 }
 
+// Remove Mobile Menu on devices with width greater than 950px starts
+
+    // Function Definition & Logic
+    function remove_menu(media_width) {
+        if (media_width.matches) {
+            closeMenu();
+        }
+    }
+    // Variable for defining media query width
+    var media_width = window.matchMedia("(min-width:950px)");
+
+    // Function call
+    remove_menu(media_width);
+
+    // Attach listener function on state changes
+    media_width.addListener(remove_menu);
+
+// Remove Mobile Menu on devices with width greater than 950px ends
