@@ -1,13 +1,13 @@
 // Variables
-var navbar_ul = document.getElementById("navbar-ul");
-var logo = document.getElementById("logo");
-var open_menu = document.getElementById("open-menu");
-var welcome = document.getElementById("welcome");
-var services_container = document.getElementById("services-container");
-var delivery_container = document.getElementById("delivery-container");
-var team_container = document.getElementById("team-container");
-var contact = document.getElementById("contact");
-var footer = document.getElementById("footer");
+let navbar_ul = document.getElementById("navbar-ul");
+let logo = document.getElementById("logo");
+let open_menu = document.getElementById("open-menu");
+let welcome = document.getElementById("welcome");
+let services_container = document.getElementById("services-container");
+let delivery_container = document.getElementById("delivery-container");
+let team_container = document.getElementById("team-container");
+let contact = document.getElementById("contact");
+let footer = document.getElementById("footer");
 
 // Function Open Mobile Menu 
 function openMenu() {
@@ -49,7 +49,7 @@ function closeMenu() {
         }
     }
     // Variable for defining media query width
-    var media_width = window.matchMedia("(min-width:950px)");
+    let media_width = window.matchMedia("(min-width:950px)");
 
     // Function call
     remove_menu(media_width);
@@ -58,3 +58,11 @@ function closeMenu() {
     media_width.addListener(remove_menu);
 
 // Remove Mobile Menu on devices with width greater than 950px ends
+
+
+// Remove mobile menu when escape key pressed
+    window.addEventListener('keydown', function(event){
+        if(event.key=="Escape"){
+            closeMenu();
+        }
+    });

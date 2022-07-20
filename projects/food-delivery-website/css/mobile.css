@@ -40,7 +40,7 @@
         margin: 10px 34px;
     }
 
-    #open-menu a{
+    #open-menu a {
         display: block;
         color: wheat;
         font-size: 1.5rem;
@@ -54,10 +54,11 @@
 
     /* Close menu on Navbar */
 
-    #close-menu{
+    #close-menu {
         display: block;
     }
-    #close-menu a{
+
+    #close-menu a {
         color: white;
         display: inline-block;
         margin-top: .5rem;
@@ -69,7 +70,8 @@
         text-align: right;
         padding: .5rem .7rem;
     }
-    #close-menu a:hover{
+
+    #close-menu a:hover {
         background-color: white;
         color: black;
     }
@@ -190,7 +192,4 @@
     .h-secondary {
         font-size: 1.8rem;
     }
-
-
-
 }
