@@ -39,6 +39,8 @@ html {
     position: sticky;
     z-index: 1;
     top: 0px;
+    transition: all 0.4s ease;
+
 }
 
 /* Navbar Logo */
