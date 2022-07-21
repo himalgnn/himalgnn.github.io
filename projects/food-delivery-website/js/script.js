@@ -1,16 +1,19 @@
-// Variables
-let navbar_ul = document.getElementById("navbar-ul");
-let logo = document.getElementById("logo");
-let open_menu = document.getElementById("open-menu");
-let welcome = document.getElementById("welcome");
-let services_container = document.getElementById("services-container");
-let delivery_container = document.getElementById("delivery-container");
-let team_container = document.getElementById("team-container");
-let contact = document.getElementById("contact");
-let footer = document.getElementById("footer");
+// Variables start
+    let navbar_ul = document.getElementById("navbar-ul");
+    let open_menu = document.getElementById("open-menu");
+    let close_menu_a = document.getElementById("close-menu-a");
+    let logo = document.getElementById("logo");
+    let welcome = document.getElementById("welcome");
+    let services_container = document.getElementById("services-container");
+    let delivery_container = document.getElementById("delivery-container");
+    let team_container = document.getElementById("team-container");
+    let contact = document.getElementById("contact");
+    let footer = document.getElementById("footer");
+    let menuToggle;
+// Variables ends
 
-// Function Open Mobile Menu 
-function openMenu() {
+// Function Open Mobile Menu starts
+function openMenu(event) {
     navbar_ul.style.left = "0%";
 
     // Blur Elements on mobile menu toggle
@@ -22,9 +25,15 @@ function openMenu() {
     team_container.style.filter = "blur(4px)";
     contact.style.filter = "blur(4px)";
     footer.style.filter = "blur(4px)";
-}
 
-// Function Close Mobile Menu 
+    menuToggle = true; //Menu toggle set true
+
+    event.stopPropagation(); // Stop propagation of open-menu function on unnecessary div and body
+}
+// Function Open Mobile Menu ends
+
+
+// Function Close Mobile Menu starts
 function closeMenu() {
     navbar_ul.style.left = "-100%";
 
@@ -38,7 +47,23 @@ function closeMenu() {
     contact.style.filter = "blur(0)";
     footer.style.filter = "blur(0)";
 
+    menuToggle = false; // Menu toggle set false
 }
+// Function Close Mobile Menu ends
+
+
+// Menu Tweaks starts
+open_menu.addEventListener('click', openMenu); // Event listener for opening menu when clicked on open-menu
+
+close_menu_a.addEventListener('click', closeMenu); // Event listener for closing menu when clicked on close-menu-a
+
+navbar_ul.addEventListener('click', function(event){
+        event.stopPropagation(); // Stop propagation of closeMenu() function(Added on body) on navbar_ul 
+})
+
+document.body.addEventListener("click", closeMenu); // Close menu when clicked on elements except navbar_ul
+
+// Menu Tweaks ends
 
 // Remove Mobile Menu on devices with width greater than 950px starts
 
@@ -60,22 +85,28 @@ function closeMenu() {
 // Remove Mobile Menu on devices with width greater than 950px ends
 
 
-// Remove mobile menu when escape key pressed
+// Remove mobile menu when escape key pressed starts
     window.addEventListener('keydown', function(event){
         if(event.key=="Escape"){
             closeMenu();
         }
     });
 
-// Remove Navigation Bar on Scroll Down
+// Remove mobile menu when escape key pressed ends
+
+// Remove Navigation Bar on Scroll Down starts
     let scroll1 = window.pageYOffset;
         window.onscroll = function(){
             let scroll2 = window.pageYOffset;
-            if(scroll1 > scroll2 ){
-                document.querySelector('nav').style.top = '0';
+            if(menuToggle!=true){ // If menu toggle is not equal true, then only execute below :-
+                if(scroll1 > scroll2 ){
+                    document.querySelector('nav').style.top = '0';
+                }
+                else{
+                    document.querySelector('nav').style.top = '-100px';
+                    document.querySelector('ul').style.top = '0';
+                }
+                scroll1 = scroll2;
             }
-            else{
-                document.querySelector('nav').style.top = '-100px';
-            }
-            scroll1 = scroll2;
         }
+// Remove Navigation Bar on Scroll Down ends
