@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "Dancing Script";
+    src: url('../fonts/DancingScript-Bold.ttf');
+}
+@font-face {
+    font-family: "Raleway";
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+body {
+  padding: 50px 100px;
+  background-color: cornsilk;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Dancing Script";
+  font-weight: 700;
+  font-size: 40px;
+  color: #be4b50;
+}
+
+#container {
+  border-radius: 2rem;
+  text-align: center;
+  background-color: #1abc9c;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.separator {
+  transform: rotateZ(90deg);
+  margin-top: 2.8rem;
+}
+
+.inp {
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  width: 15rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid #be4b50;
+}
+
+label {
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 959px) {
+  body {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 825px) {
+  #inside {
+    flex-direction: column;
+  }
+  .separator {
+    transform: rotateZ(0deg);
+    margin: 1rem;
+  }
+  .inp {
+    width: 22rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .inp {
+    width: 18rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    padding: 0;
+  }
+
+  .inp {
+    width: 6em;
+  }
+}
+@media only screen and (max-width: 250px) {
+  .inp {
+    width: 4em;
+  }
+}
