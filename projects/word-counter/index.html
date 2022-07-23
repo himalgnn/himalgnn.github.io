@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter - Count Words & Character</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+
+<body>
+    <div id="content">
+        <div id="inside">
+            <div id="h1">
+                <h1>Word & Character Counter</h1>
+            </div>
+            <div id="textarea">
+                <textarea id="textbox" autofocus="" cols="40" rows="12"
+                    placeholder="Type or paste your text"></textarea>
+            </div>
+            <div id="p">
+                <p>
+                    <span id="word">0</span> Words and
+                    <span id="char">0</span> Character
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let textbox = document.getElementById('textbox');
+
+        textbox.addEventListener('input', function () {
+            let text = this.value;
+            let char = text.length;
+            document.getElementById('char').innerHTML = char;
+
+            text = text.trim();
+
+            let words = text.split(" ");
+            let cleanList = words.filter(function (elm) {
+                return elm != "";
+            })
+            document.getElementById('word').innerHTML = cleanList.length;
+        });
+    </script>
+</body>
+
+</html>

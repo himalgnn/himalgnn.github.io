@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../fonts/DancingScript-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../fonts/SpaceMono-Regular.ttf");
+}
+
+body {
+  padding: 2rem 10rem;
+  background-color: rgb(223, 216, 192);
+}
+
+h1 {
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Dancing Script";
+  font-size: 2rem;
+  text-align: center;
+  background-color: cornsilk;
+  color: #be4b50;
+  padding: 1rem;
+  margin: 0;
+}
+
+p {
+  font-family: "Raleway";
+  text-align: center;
+  background-color: cornsilk;
+  color: #be4b50;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 0;
+}
+
+#word,
+#char {
+  font-family: "Space Mono";
+  font-size: 2rem;
+}
+
+#inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 1rem;
+  box-shadow: 3px 3px 8px #d8c1c1, -3px -3px 8px #d8c1c1;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+#h1,
+#textarea,
+#p {
+  width: 100%;
+}
+
+#textbox {
+  width: 100%;
+  border-color: white;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-family: "Raleway";
+  outline: none;
+  border-top: 1px solid #be4b50;
+  border-bottom: 1px solid #be4b50;
+  box-sizing: border-box;
+  resize: vertical;
+  text-align: justify;
+}
+
+textarea::-webkit-resizer {
+  border-width: 5px;
+  border-style: double;
+  border-color: transparent #be4b50 #be4b50 transparent;
+}
+
+@media only screen and (max-width: 1100px) {
+  body {
+    padding: 1rem 6rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  body {
+    padding: 1rem 3rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body {
+    padding: 1rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  p,
+  #textbox {
+    font-size: 1rem;
+  }
+  #word,
+  #char {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.1rem;
+  }
+  p,
+  #textbox {
+    font-size: 0.7rem;
+  }
+  #word,
+  #char {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 300px) {
+  body {
+    padding: 0.5rem 0.5rem;
+  }
+  h1 {
+    font-size: 0.6rem;
+  }
+  p,
+  #textbox {
+    font-size: 0.5rem;
+  }
+  #word,
+  #char {
+    font-size: 0.8rem;
+  }
+  #textbox {
+    padding: 1rem;
+  }
+  #inside {
+    margin: 0.5;
+  }
+}
+@media only screen and (max-width: 200px) {
+  body {
+    padding: 0.5rem 0.5rem;
+  }
+  h1 {
+    font-size: 0.5rem;
+  }
+  p,
+  #textbox {
+    font-size: 0.3rem;
+  }
+  #word,
+  #char {
+    font-size: 0.3rem;
+  }
+  #textbox {
+    padding: 0.4rem;
+  }
+  #inside {
+    margin: 0;
+  }
+}
