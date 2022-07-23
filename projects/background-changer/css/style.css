@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Headland+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
+body {
+  margin: 0;
+  padding: 1rem 10rem;
+}
+
+h1 {
+  text-align: center;
+  /* text-decoration: underline; */
+  font-family: "Headland One", serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.2rem;
+  text-align: justify;
+  font-family: 'Edu SA Beginner', cursive;
+
+}
+
+.btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  border: 2px solid gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#white {
+  background-color: white;
+}
+
+#aqua {
+  background-color: aquamarine;
+}
+
+#violet {
+  background-color: #ce9aff;
+}
+
+#black {
+  background-color: black;
+}
+#purple {
+  background-color: purple;
+}
+
+#color-switcher {
+  text-align: right;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1140px){
+    body{
+        padding: 1rem 8rem;
+    }
+}
+@media only screen and (max-width: 900px){
+    body{
+        padding: 1rem 6rem;
+    }
+}
+@media only screen and (max-width: 600px){
+    body{
+        padding: 1rem 4rem;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 500px){
+    body{
+        padding: 1rem 3rem;
+    }
+}
+@media only screen and (max-width: 400px){
+    body{
+        padding: 1rem 2rem;
+    }
+    .btn{
+        width: 1rem;
+        height: 1rem;
+    }
+}
+@media only screen and (max-width: 300px){
+    body{
+        padding: 1rem 1rem;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 200px){
+    body{
+        padding: 1rem 0.5rem;
+    }
+    .btn{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer - Customize and Read</title>
+
+    <!-- Stylesheet  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+
+<body>
+    <div id="content">
+        <div id="color-switcher">
+            <!--Color Switcher Div-->
+            <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+            <!--Execute changeBG() function onclick the span.-->
+            <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+            <span class="btn" id="purple" onclick="changeBG('purple')"></span>
+            <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+            <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+        </div>
+        <hr>
+        <h1 class="text">About US</h1>
+        <hr>
+        <img src="/img/about.png" alt="About Us">
+        <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, vero! Omnis facilis ipsa ad. Quis amet
+            eveniet
+            blanditiis laudantium. In enim est qui quod iusto distinctio sapiente quam tenetur facere illum, voluptates
+            ratione alias eius a mollitia aliquam animi ex tempora hic ipsam, iste aperiam nisi sit dolores. Nihil amet
+            harum a odio dolores. Quam, obcaecati cupiditate autem ut sapiente unde, eius perferendis quibusdam, maiores
+            beatae nisi. Culpa laborum repudiandae voluptates sed aspernatur magni reiciendis at recusandae suscipit!
+            Expedita facilis, dignissimos impedit modi voluptate laborum dolorum voluptatibus distinctio velit
+            voluptates
+            odit. Reiciendis quasi a maiores nostrum ipsa veniam aperiam voluptatem. Delectus reiciendis, sint ad
+            quaerat
+            vel at, dolorem aliquam, praesentium laudantium magnam blanditiis sequi laboriosam dolore! Veritatis iusto
+            vel
+            molestiae voluptates similique doloremque dolorum voluptate iste amet eveniet ratione aut, nihil itaque
+            adipisci
+            voluptas dolorem recusandae omnis voluptatibus laboriosam dicta consequatur est illo facere numquam. Vero
+            fuga
+            voluptatem sequi voluptates inventore, dolores, et rerum alias optio cupiditate aliquam. Atque esse nesciunt
+            dolorum sunt, eius explicabo voluptates obcaecati incidunt sequi itaque, ullam maiores accusantium deleniti
+            autem ratione asperiores laboriosam? Aspernatur veritatis quam libero, voluptatum impedit, consequatur nobis
+            nulla cum eaque sint ipsa, placeat a quos provident autem dolorum magni cumque. Ea impedit recusandae harum
+            eius? Iusto, blanditiis! Minus facilis saepe quas, iure magnam molestias repellat illum rerum alias porro
+            vel
+            dicta blanditiis delectus nemo repudiandae pariatur omnis impedit odio possimus suscipit iusto. Explicabo
+            possimus maiores pariatur adipisci quidem delectus, rem magni laboriosam voluptates et eius voluptatum
+            assumenda
+            eos eum, ipsam repellendus ipsa voluptatem officiis enim, placeat corporis. Pariatur nesciunt reiciendis
+            velit
+            facere ipsam optio voluptatum, culpa, ut in esse quo dolorem odio placeat cumque quasi eos sit, molestias
+            sapiente at dolores. Quos laborum eius culpa error accusantium eaque commodi officia laudantium, voluptas
+            quod
+            voluptatum corporis itaque consequatur earum minus, quibusdam nostrum quia numquam consectetur, eum tenetur
+            cupiditate minima cumque. Tempora neque suscipit dolore ratione, non harum, aperiam rem adipisci sequi
+            ducimus
+            ab alias beatae voluptatibus. At explicabo inventore facilis. Tempore ipsam corrupti, mollitia, minus
+            asperiores
+            nisi fugiat error nulla harum quae consequuntur et, magnam reiciendis inventore quaerat ducimus nam
+            necessitatibus ex quam eveniet ipsum. Iste aperiam quam nisi culpa officia similique exercitationem ipsum
+            omnis
+            adipisci rerum! Nesciunt voluptates hic harum fugit asperiores vero nemo similique. Consequatur doloribus
+            neque
+            eligendi asperiores officia, aut quibusdam a laudantium quis autem sit quisquam molestiae repudiandae
+            reprehenderit in ipsa molestias cumque hic ea iste tempore omnis! Odio distinctio ducimus ipsam dolores.
+            Corporis, debitis autem? Tempore, inventore nihil recusandae beatae doloremque natus. Architecto ratione,
+            deleniti quis libero et dicta at voluptate, tempore ducimus consequuntur dolor minus quasi, reprehenderit
+            porro
+            debitis a pariatur quas provident assumenda. Fugit iusto odio vero saepe voluptatibus consequuntur ipsa
+            tenetur
+            voluptates tempore, laudantium, numquam qui cum dolore molestias labore pariatur. Vitae nobis amet
+            cupiditate
+            non at explicabo nostrum inventore placeat voluptate repellat! Reprehenderit quas laboriosam sunt, vero
+            eveniet
+            architecto tempora? Eveniet hic, quas, amet dolorem qui accusamus dolorum porro quia voluptatum sed ut
+            debitis
+            incidunt rem, in ipsum facilis laborum blanditiis. Nobis, excepturi?
+        </p>
+    </div>
+    <!-- JavaScript Starts -->
+    <script>
+        function changeBG(color) { // Function to change background color
+            document.body.style.backgroundColor = color; // Set body background color to color parameter on function execution
+
+            let txt = document.getElementsByClassName('text');
+            let brd = document.getElementById('content');
+
+            if (color == '#000000' || color == "purple") { // Change text color to white if background color is black or purple
+                for (let elm of txt) {
+                    elm.style.color = 'white';
+                }
+
+            } else { // If background color is not black or purple change text color to black
+                for (let elm of txt) {
+                    elm.style.color = 'black';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
