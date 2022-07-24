@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form Validation in JavaScript</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://himal61.com.np/files/favicon.ico" type="image/x-icon">
+    <!-- Stylesheet -->
+    <style>
+        body {
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #form-container {
+            background-color: white;
+            padding: 4rem;
+            text-align: center;
+            border-radius: .5rem;
+        }
+
+        h2 {
+            margin: 0 0 2rem 0;
+
+        }
+
+        input {
+            width: 15rem;
+            margin: .5rem 0;
+            padding: 1rem;
+        }
+
+        input[type='submit'] {
+            width: 17.2rem;
+            background-color: #3498db;
+            border: 0;
+            color: white;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            margin: 0;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form-container">
+        <h2>Login</h2>
+        <form action="" onsubmit="return validateForm()">
+            <input type="text" placeholder="Username" id="username"><br>
+            <p id="userError" class="error"></p>
+            <input type="password" placeholder="Password" id="password"><br>
+            <p id="passError" class="error"></p>
+            <input type="submit">
+        </form>
+    </div>
+
+    <script>
+
+        let username = document.getElementById('username');
+        let password = document.getElementById('password');
+        let usr = 1;
+        let pwd = 1;
+
+        function validateForm() {
+            if (username.value == "") {
+                document.getElementById('userError').innerHTML = "Please enter your Username";
+                usr = 0;
+            } else if (username.value.length < 3) {
+                document.getElementById('userError').innerHTML = "Username requires minimum 3 Character";
+                usr = 0
+            } else {
+                document.getElementById('userError').innerHTML = "";
+                usr = 1;
+            }
+
+            if (password.value == "") {
+                document.getElementById('passError').innerHTML = "Please enter your Password";
+                pwd = 0;
+            } else {
+                document.getElementById('passError').innerHTML = "";
+                pwd = 1;
+            }
+            if (usr && pwd) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
