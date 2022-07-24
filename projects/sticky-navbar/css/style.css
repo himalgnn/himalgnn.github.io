@@ -1,0 +1,237 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap'); */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ecf0f1;
+  font-family: "Dancing Script", cursive;
+}
+
+#header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#logo {
+  width: 8rem;
+  height: auto;
+  cursor: pointer;
+}
+#menu-bar {
+  text-align: center;
+  background-color: cadetblue;
+  z-index: 2;
+}
+#menu-bar li {
+  /* display: inline-block; */
+  list-style-type: none;
+  padding: 1rem 1rem;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+#menu-bar a {
+  cursor: pointer;
+}
+#menu-bar #menu-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  margin: 0;
+  text-align: center;
+}
+#menu-bar #m-menu-toggle{
+    display: none;
+}
+#h1 {
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  text-decoration: underline;
+  margin: 1rem;
+}
+#container {
+  text-align: center;
+  padding: 0.5rem 8rem;
+}
+#about-img {
+  width: 100%;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+#inside {
+  margin: 0.5rem 5rem;
+  padding-top: 1rem;
+  background-color: azure;
+  border: 1px solid black;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 8px #d8c1c1, -3px -3px 8px #d8c1c1;
+}
+
+/* Span Styling*/
+
+#span {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 21rem;
+  left: 4rem;
+  z-index: 1;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+#azure {
+  background-color: azure;
+}
+#cyan {
+  background-color: cyan;
+}
+#yellow {
+  background-color: yellow;
+}
+#pink {
+  background-color: #2ecc71;
+}
+#tomato {
+  background-color: #ff6348;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1100px) {
+  #inside {
+    margin: 0.5rem 3rem;
+  }
+  #span {
+    position: static;
+    transform: rotate(0deg);
+  }
+}
+@media only screen and (max-width: 900px) {
+  #inside {
+    margin: 0.5rem 1rem;
+  }
+  #container {
+    padding: 1rem 5rem;
+  }
+  #span {
+    left: 0.5rem;
+  }
+  .btn {
+    width: 1rem;
+    height: 1rem;
+  }
+  #h1 {
+    font-size: 1.7rem;
+    margin: 0;
+    margin-bottom: .5rem
+  }
+  #logo{
+    width: 5rem;
+  }
+}
+@media only screen and (max-width: 670px) {
+  #inside {
+    margin: 0.5rem 1rem;
+  }
+  #menu-bar li {
+    font-size: 0.9rem;
+  }
+  #container {
+    padding: 1rem 4rem;
+  }
+  #logo {
+    width: 5rem;
+  }
+  #h1 {
+    font-size: 1.5rem;
+  }
+  #p {
+    font-size: 0.8rem;
+  }
+  #header{
+    margin-bottom:.5rem;
+  }
+}
+@media only screen and (max-width: 580px) {
+  #inside {
+    margin: 0.5rem 0.8rem;
+  }
+  #menu-bar li {
+    font-size: 0.7rem;
+    padding: 0.8rem 0.8rem;
+  }
+  #p {
+    font-size: 0.6;
+  }
+  #container {
+    padding: 1rem 3rem;
+  }
+  #logo {
+    width: 4rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  #inside {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+  }
+  #menu-bar li {
+    font-size: 0.5rem;
+    padding: 0.7rem 0.7rem;
+  }
+
+  #m-menu-toggle li{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #container {
+    padding: 1rem 2rem;
+  }
+}
+@media only screen and (max-width: 390px) {
+  #logo {
+    width: 3rem;
+  }
+  #menu-bar li {
+    font-size: 0.5rem;
+    padding: 0.5rem 0.5rem;
+  }
+  #container {
+    padding: 1rem 1rem;
+  }
+}
+@media only screen and (max-width: 280px) {
+  #logo {
+    width: 2rem;
+  }
+  #menu-bar li {
+    font-size: 0.3rem;
+    padding: 0.4rem 0.4rem;
+  }
+  #container {
+    padding: .5rem .5rem;
+  }
+  #h1{
+    font-size: 1rem;
+    margin-bottom: .2rem;
+  }
+  .btn{
+    width: .5rem;
+    height: .5rem;
+  }
+  #p{
+    font-size: .5rem;
+  }
+}
