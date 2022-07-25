@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <div class="slide-container">
+        <!-- <div class="top-caption">Images Slider</div> -->
+        <div class="slide">
+            <img src="img/1.jpeg" alt="">
+            <div class="caption">Hills and Mountains</div>
+        </div>
+        <div class="slide">
+            <img src="img/2.jpeg" alt="">
+            <div class="caption">Beach</div>
+        </div>
+        <div class="slide">
+            <img src="img/3.jpeg" alt="">
+            <div class="caption">Ocean View</div>
+        </div>
+        <div class="slide">
+            <img src="img/4.jpeg" alt="">
+            <div class="caption">Birds in Sky</div>
+        </div>
+
+        <span class="arrow prev" onclick="controller(-1)">&#10094;</span>
+        <span class="arrow next" onclick="controller(1)">&#10095;</span>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
